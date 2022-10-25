@@ -34,6 +34,12 @@ public class Turno {
 		this.fecha = fecha;
 	}
 
+	@Override
+	public String toString() {
+		return "Turno [id_turno=" + id_turno + ", fecha=" + fecha + ", hora=" + hora + ", id_medico=" + id_medico
+				+ ", id_cliente=" + id_cliente + "]";
+	}
+
 	public LocalTime getHora() {
 		return hora;
 	}

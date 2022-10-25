@@ -32,17 +32,21 @@ public class Clinica {
 		LocalDate diaTurno1 = LocalDate.of(2019, 03, 01); //01-03-2019
 		LocalTime horaTurno1 = LocalTime.of(5, 30, 45, 35); //05:30:45:35
 		
-		Turno turno1 = new Turno(100, diaTurno1, horaTurno1, medico1.getApellido(), cliente1.getApellido());
+		Turno turno1 = new Turno(100, diaTurno1, horaTurno1, medico1, cliente1);
 		
 	
 
 		try {
+			sistemaMedico.agregarTurno(turno1);
 			sistemaMedico.agregarTurno(turno1);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			;
 		}
 		
+		
+		System.out.println("Listado de TURNOS: ");
+		System.out.println(sistemaMedico);
 		
 		
 		

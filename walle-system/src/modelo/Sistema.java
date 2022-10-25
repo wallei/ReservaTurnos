@@ -54,6 +54,11 @@ public class Sistema {
 		
 		return calendario.add(turno);
 	}
+
+	@Override
+	public String toString() {
+		return "Sistema [calendario=" + calendario + "]";
+	}
 	
 	
 

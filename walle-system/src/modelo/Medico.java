@@ -1,6 +1,13 @@
 package modelo;
 
 public class Medico {
+	@Override
+	public String toString() {
+		return "Medico [id_medico=" + id_medico + ", nombre=" + nombre + ", apellido=" + apellido + ", especialidad="
+				+ especialidad + "]";
+	}
+
+
 	private int id_medico;
 	private String nombre;
 	private String apellido;
