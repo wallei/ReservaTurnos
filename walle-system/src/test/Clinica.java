@@ -39,16 +39,20 @@ public class Clinica {
 	
 
 		try {
-			sistemaMedico.agregarTurno(turno1);
-			sistemaMedico.agregarTurno(turno2);
-			sistemaMedico.agregarTurno(turno1);
+			System.out.println("El turno fue agregado: " + sistemaMedico.agregarTurno(turno1));
+			System.out.println("El turno fue agregado: " + sistemaMedico.agregarTurno(turno2));
+			System.out.println("El turno fue agregado: " + sistemaMedico.agregarTurno(turno1));
+			
+			
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 			;
 		}
 		
 		
+		System.out.println("Listado pacientes fecha: " + diaTurno1);
 		System.out.println(sistemaMedico.traerTurnoPorDia(diaTurno1));
+		
 		
 		
 		//System.out.println("Listado de TURNOS: ");
