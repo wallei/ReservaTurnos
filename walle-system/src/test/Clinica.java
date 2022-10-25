@@ -21,16 +21,7 @@ public class Clinica {
 
 		Cliente cliente1 = new Cliente(001, "Walter", "Gazzanego", "32.830.433" );
 		Cliente cliente2 = new Cliente(002, "Marcos", "Amaro", "26.830.433" );
-		Cliente cliente3 = new Cliente(003, "Nahuel", "Flowers", "15.233.235" );
-		
-		
-/*
- * 		System.out.println("Listado de PACIENTES: ");
-		System.out.println(cliente1);
-		System.out.println(cliente2);
-		System.out.println(cliente3); 
- */
-		
+		Cliente cliente3 = new Cliente(003, "Nahuel", "Flowers", "15.233.235" );	
 		
 		Medico medico1 = new Medico(100, "Nick", "Riviera", "clinico");
 		
@@ -56,8 +47,11 @@ public class Clinica {
 			;
 		}
 		
+		System.out.println();
+		
 		
 		System.out.println("Listado pacientes fecha: " + dtf.format(diaTurno1));
+		System.out.println();
 		
 		try {
 			
@@ -66,21 +60,10 @@ public class Clinica {
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
-		
 
-		
 		System.out.println();
 		
-		
-		
-		
-		//System.out.println("Listado de TURNOS: ");
-		
-		
-		
-		
-		
-		
+	
 		
 	}
 

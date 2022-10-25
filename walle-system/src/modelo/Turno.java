@@ -2,6 +2,7 @@ package modelo;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class Turno {
 	private int id_turno;
@@ -64,15 +65,19 @@ public class Turno {
 		this.id_cliente = id_cliente;
 	}
 	
+	DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd MMMM YYYY");
+	
+	DateTimeFormatter dtfs = DateTimeFormatter.ofPattern("HH:mm");
+
 	
 	public String mostrarInformacion() {
-		return "Turno [id_turno=" + id_turno + ", fecha= " + fecha + ", hora= " + hora.getHour()+":"+hora.getMinute() + ", Medico= " + id_medico.getApellido()
-				+ ", Paciente= " + id_cliente.getApellido() + "]";
+		return "Turno = " + id_turno + ", fecha = " + dtf.format(fecha) + ", hora = " + dtfs.format(hora) + ", Medico = " + id_medico.getApellido()
+				+ ", Paciente = " + id_cliente.getApellido() ;
 	}
 	
 
-
-	
+	// fecha.getDayOfMonth()+"-"+fecha.getMonth()+"-"+fecha.getYear() +
+	// hora.getHour()+":"+hora.getMinute()
 	
 	
 
