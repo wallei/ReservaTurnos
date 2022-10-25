@@ -2,6 +2,7 @@ package test;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -33,6 +34,7 @@ public class Clinica {
 		
 		Medico medico1 = new Medico(100, "Nick", "Riviera", "clinico");
 		
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd MMMM YYYY");
 		LocalDate diaTurno1 = LocalDate.of(2019, 03, 01); //01-03-2019
 		LocalDate diaTurnote = LocalDate.of(2020, 03, 01); //01-03-2019
 		LocalTime horaTurno1 = LocalTime.of(5, 30, 45, 35); //05:30:45:35
@@ -55,7 +57,7 @@ public class Clinica {
 		}
 		
 		
-		System.out.println("Listado pacientes fecha: " + diaTurno1);
+		System.out.println("Listado pacientes fecha: " + dtf.format(diaTurno1));
 		
 		try {
 			
@@ -71,7 +73,12 @@ public class Clinica {
 		
 		
 		
+		
 		//System.out.println("Listado de TURNOS: ");
+		
+		
+		
+		
 		
 		
 		
