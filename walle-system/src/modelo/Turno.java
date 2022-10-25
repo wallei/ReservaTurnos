@@ -66,9 +66,12 @@ public class Turno {
 	
 	
 	public String mostrarInformacion() {
-		return "Turno [id_turno=" + id_turno + ", fecha=" + fecha + ", hora=" + hora + ", Medico=" + id_medico.getApellido()
-				+ ", Paciente=" + id_cliente.getApellido() + "]";
+		return "Turno [id_turno=" + id_turno + ", fecha= " + fecha + ", hora= " + hora.getHour()+":"+hora.getMinute() + ", Medico= " + id_medico.getApellido()
+				+ ", Paciente= " + id_cliente.getApellido() + "]";
 	}
+	
+
+
 	
 	
 	

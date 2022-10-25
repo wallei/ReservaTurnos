@@ -2,6 +2,10 @@ package test;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 
 import modelo.Cliente;
 import modelo.Sistema;
@@ -30,6 +34,7 @@ public class Clinica {
 		Medico medico1 = new Medico(100, "Nick", "Riviera", "clinico");
 		
 		LocalDate diaTurno1 = LocalDate.of(2019, 03, 01); //01-03-2019
+		LocalDate diaTurnote = LocalDate.of(2020, 03, 01); //01-03-2019
 		LocalTime horaTurno1 = LocalTime.of(5, 30, 45, 35); //05:30:45:35
 		LocalTime horaTurno2 = LocalTime.of(6, 00, 45, 35); //05:30:45:35
 		
@@ -51,7 +56,18 @@ public class Clinica {
 		
 		
 		System.out.println("Listado pacientes fecha: " + diaTurno1);
-		System.out.println(sistemaMedico.traerTurnoPorDia(diaTurno1));
+		
+		try {
+			
+			sistemaMedico.mostrarListaPorFecha(diaTurno1);
+			
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+		}
+		
+
+		
+		System.out.println();
 		
 		
 		

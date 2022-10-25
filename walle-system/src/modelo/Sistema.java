@@ -53,6 +53,18 @@ public class Sistema {
 		return listadoPorFecha;
 
 	} 
+ 	
+ 	
+ 	public void mostrarListaPorFecha (LocalDate fecha)  {
+ 		
+		List <Turno> lista = this.traerTurnoPorDia(fecha);  
+ 		
+		for (Turno elemento : lista) {		
+			System.out.println(elemento.mostrarInformacion());
+			
+		}
+	
+ 	}
 
 	
 
