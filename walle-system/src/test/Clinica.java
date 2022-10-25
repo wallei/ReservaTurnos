@@ -45,8 +45,10 @@ public class Clinica {
 		}
 		
 		
-		System.out.println("Listado de TURNOS: ");
-		System.out.println(sistemaMedico);
+		System.out.println(sistemaMedico.traerTurnoPorDia(diaTurno1));
+		
+		
+		//System.out.println("Listado de TURNOS: ");
 		
 		
 		

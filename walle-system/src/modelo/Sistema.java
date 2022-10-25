@@ -1,5 +1,6 @@
 package modelo;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,23 +21,6 @@ public class Sistema {
 	}
 	
 	
-	
-	/* 
-	 * 	public boolean agregarPelicula(String pelicula) throws Exception {
-		int id = 1;
-
-		for (int i = 0; i < catalogo.size(); i++) {
-			if (catalogo.get(i).getPelicula().equals(pelicula))
-				throw new Exception("La pelicula ya existe!");
-		}
-
-		if (catalogo.size() > 0)
-			id = catalogo.get(catalogo.size() - 1).getIdPelicula() + 1;
-
-		return catalogo.add(new Pelicula(id, pelicula));
-	}
-	 */
-	
 	public boolean agregarTurno(Turno turno) throws Exception {
 		int id_turno=1;
 		
@@ -54,6 +38,23 @@ public class Sistema {
 		
 		return calendario.add(turno);
 	}
+	
+	
+ 	public List<Turno> traerTurnoPorDia(LocalDate fecha) {
+
+		List<Turno> listadoPorFecha = new ArrayList<Turno>();
+
+		for (int i = 0; i < calendario.size(); i++) {
+			if (calendario.get(i).getFecha().equals(fecha)) {
+				listadoPorFecha.add(calendario.get(i));
+			}
+		}
+
+		return listadoPorFecha;
+
+	} 
+
+	
 
 	@Override
 	public String toString() {
